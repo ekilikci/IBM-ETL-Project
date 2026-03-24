@@ -26,3 +26,12 @@ Your boss asked you to compile the list of the top 10 largest banks in the world
 - Write a function to log the progress of the code.
 
 - While executing the data initialization commands and function calls, maintain appropriate log entries.
+
+Preliminaries complete. Initiating ETL process
+Call extract() function Data extraction complete. Initiating Transformation process
+Call transform() function Data transformation complete. Initiating Loading process
+Call load_to_csv() Data saved to CSV file
+Initiate SQLite3 connection SQL Connection initiated
+Call load_to_db() Data loaded to Database as a table, Executing queries
+Call run_query() Process Complete
+Close SQLite3 connection Server Connection closed

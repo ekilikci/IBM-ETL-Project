@@ -88,8 +88,11 @@ transform(df,csv_path)
 load_to_csv(df, output_csv_path)
 sql_connection = sqlite3.connect(database_name)
 load_to_db(df, sql_connection, table_name)
-query_statement = f"SELECT * from {table_name} WHERE MC_USD_Billion >= 100"
-
+query_statement = f"SELECT * from {table_name}"
+run_queries(query_statement, sql_connection)
+query_statement= f"SELECT AVG(MC_GBP_Billion) FROM {table_name}"
+run_queries(query_statement, sql_connection)
+query_statement= f"SELECT Name from {table_name} LIMIT 5"
 run_queries(query_statement, sql_connection)
 
 sql_connection.close()
